@@ -75,6 +75,12 @@
         <a class=" nav-link " href="<?= base_url(); ?>"> <i class="ni ni-tv-2 text-primary"></i> Manajemen Halaman
             </a>
         </li>
+        <?php foreach ($publish_pages as $pp) : ?>
+        <li class="nav-item active">
+        <a class="nav-link" href="<?= $pp['url']; ?>"> <i class="<?= $pp['icon']; ?> text-primary"></i><?= $pp['title']; ?>
+            </a>
+        </li>
+        <?php endforeach ?>
         <li class="nav-item">
             <a class="nav-link " href="https://github.com/RidhoAldiko/PengelolaHalaman"  target="_blank">
             <i class="fas fa-file-alt text-primary"></i> Dokumentasi GitHub
