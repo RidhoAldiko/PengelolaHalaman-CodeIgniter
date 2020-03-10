@@ -26,11 +26,11 @@ class Pages extends CI_Controller {
 
         $data['publish_pages'] = $this->db->get_where('pages',['publish' => 1])->result_array();
         $data['pages'] = $this->db->get('pages')->result_array();
-        $data['title'] = "Pengelola Halaman";
-        $this->load->view('layout/sidebar',$data);
-        $this->load->view('layout/topbar');
-        $this->load->view('halaman/index',$data);
-        $this->load->view('layout/footer');
+        $data['title'] = "Pages Menagement";
+        $this->load->view('layout/sidebar.php',$data);
+        $this->load->view('layout/topbar.php');
+        $this->load->view('pages/index.php',$data);
+        $this->load->view('layout/footer.php');
         }else {
         $data = [
 
@@ -53,8 +53,11 @@ class Pages extends CI_Controller {
                 <span aria-hidden="true">&times;</span>
                 </button>
         </div>');
-        redirect('halaman');
+        redirect('pages');
         }
+        
+
+                
         }
 
         public function changePublish(){

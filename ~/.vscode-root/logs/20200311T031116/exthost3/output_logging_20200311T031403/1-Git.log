@@ -84,3 +84,4 @@ Open repository: /opt/lampp/htdocs/PagesManagement
 > git remote --verbose
 > git config --get commit.template
 > git show :application/views/pages/index.php
+> git show :application/controllers/Pages.php
