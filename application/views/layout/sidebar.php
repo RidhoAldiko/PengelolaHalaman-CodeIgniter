@@ -72,7 +72,7 @@
         <!-- Navigation -->
         <ul class="navbar-nav">
         <li class="nav-item active">
-        <a class=" nav-link " href="<?= base_url(); ?>"> <i class="ni ni-tv-2 text-primary"></i> Manajemen Halaman
+        <a class=" nav-link " href="<?= base_url(); ?>"> <i class="ni ni-tv-2 text-primary"></i> Pengelola Halaman
             </a>
         </li>
         <?php foreach ($publish_pages as $pp) : ?>
