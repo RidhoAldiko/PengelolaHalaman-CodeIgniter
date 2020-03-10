@@ -16,3 +16,4 @@ Open repository: /opt/lampp/htdocs/PagesManagement
 > git show :application/config/autoload.php
 > git show :application/config/config.php
 > git show :application/config/database.php
+> git check-ignore -v -z --stdin
