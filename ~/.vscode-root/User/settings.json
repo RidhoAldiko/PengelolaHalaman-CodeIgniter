@@ -1,0 +1,12 @@
+{
+    "php.suggest.basic": false,
+    "editor.formatOnSave": true,
+    "workbench.colorTheme": "One Dark Pro",
+    "explorer.openEditors.visible": 0,
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 18,
+    "editor.lineHeight": 35,
+    "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "workbench.startupEditor": "newUntitledFile"
+}
