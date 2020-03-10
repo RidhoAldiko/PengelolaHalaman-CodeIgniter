@@ -2,6 +2,7 @@
     "telemetry.machineId": "6dee5d2ebbf9e74c19e809e820167848011923f0885f33ddf8f4b3bc769d5304",
     "openedPathsList": {
         "workspaces3": [
+            "file:///opt/lampp/htdocs/PengelolaHalaman-CodeIgniter",
             "file:///opt/lampp/htdocs/PagesManagement",
             "file:///opt/lampp/htdocs/PengelolaHalaman"
         ],
@@ -50,13 +51,13 @@
                                     "id": "openRecentFolder",
                                     "uri": {
                                         "$mid": 1,
-                                        "fsPath": "/opt/lampp/htdocs/PengelolaHalaman",
-                                        "external": "file:///opt/lampp/htdocs/PengelolaHalaman",
-                                        "path": "/opt/lampp/htdocs/PengelolaHalaman",
+                                        "fsPath": "/opt/lampp/htdocs/PengelolaHalaman-CodeIgniter",
+                                        "external": "file:///opt/lampp/htdocs/PengelolaHalaman-CodeIgniter",
+                                        "path": "/opt/lampp/htdocs/PengelolaHalaman-CodeIgniter",
                                         "scheme": "file"
                                     },
                                     "enabled": true,
-                                    "label": "/opt/lampp/htdocs/PengelolaHalaman"
+                                    "label": "/opt/lampp/htdocs/PengelolaHalaman-CodeIgniter"
                                 },
                                 {
                                     "id": "openRecentFolder",
@@ -68,6 +69,17 @@
                                     },
                                     "enabled": true,
                                     "label": "/opt/lampp/htdocs/PagesManagement"
+                                },
+                                {
+                                    "id": "openRecentFolder",
+                                    "uri": {
+                                        "$mid": 1,
+                                        "external": "file:///opt/lampp/htdocs/PengelolaHalaman",
+                                        "path": "/opt/lampp/htdocs/PengelolaHalaman",
+                                        "scheme": "file"
+                                    },
+                                    "enabled": true,
+                                    "label": "/opt/lampp/htdocs/PengelolaHalaman"
                                 },
                                 {
                                     "id": "vscode.menubar.separator"
@@ -1392,5 +1404,18 @@
     },
     "theme": "vs-dark",
     "themeBackground": "#282c34",
-    "pickerWorkingDir": "/opt/lampp/htdocs"
+    "pickerWorkingDir": "/opt/lampp/htdocs",
+    "windowsState": {
+        "lastActiveWindow": {
+            "backupPath": "/opt/lampp/htdocs/PengelolaHalaman-CodeIgniter/~/.vscode-root/Backups/1583878640893",
+            "uiState": {
+                "mode": 1,
+                "x": 449,
+                "y": 182,
+                "width": 1024,
+                "height": 768
+            }
+        },
+        "openedWindows": []
+    }
 }
