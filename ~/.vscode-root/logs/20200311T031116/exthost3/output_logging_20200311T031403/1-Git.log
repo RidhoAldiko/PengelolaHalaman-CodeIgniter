@@ -17,3 +17,12 @@ Open repository: /opt/lampp/htdocs/PagesManagement
 > git show :application/config/config.php
 > git show :application/config/database.php
 > git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :application/controllers/Pages.php
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :application/views/layout/footer.php
+> git show :application/views/layout/sidebar.php
+> git show :application/views/layout/topbar.php
+> git check-ignore -v -z --stdin
+> git show :application/views/pages/index.php
