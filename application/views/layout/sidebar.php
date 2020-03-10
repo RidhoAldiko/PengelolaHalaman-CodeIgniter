@@ -82,7 +82,7 @@
         </li>
         <?php endforeach ?>
         <li class="nav-item">
-            <a class="nav-link " href="https://github.com/RidhoAldiko/PengelolaHalaman"  target="_blank">
+            <a class="nav-link " href="https://github.com/RidhoAldiko/PengelolaHalaman-CodeIgniter"  target="_blank">
             <i class="fas fa-file-alt text-primary"></i> Dokumentasi GitHub
             </a>
         </li>
