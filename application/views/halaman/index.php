@@ -6,6 +6,27 @@
     <div class="col">
     <div class="card shadow">
         <div class="card-header border-0">
+        <?= form_error('title',
+        '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>','
+        </div>') 
+        ?>
+        <?= form_error('url',
+        '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>','
+        </div>') 
+        ?>
+        <?= form_error('icon',
+        '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>','
+        </div>') 
+        ?>
         <?= $this->session->flashdata('message'); ?>
         <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addPage">
             <i class="fas fa-plus"></i> Tambah Halaman
@@ -58,7 +79,7 @@
         </button>
     </div>
     <div class="modal-body">
-    <form action="<?= base_url('pages'); ?>" method="POST">
+    <form action="<?= base_url('halaman'); ?>" method="POST">
         <div class="form-group">
             <label for="exampleInputEmail1">Judul Halaman</label>
             <input type="text" class="form-control" placeholder="Judul Halaman" id="title" name="title" aria-describedby="title">

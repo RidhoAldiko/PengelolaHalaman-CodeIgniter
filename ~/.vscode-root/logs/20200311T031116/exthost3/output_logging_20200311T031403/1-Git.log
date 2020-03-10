@@ -54,3 +54,33 @@ Open repository: /opt/lampp/htdocs/PagesManagement
 > git show :application/views/layout/sidebar.php
 > git show :application/views/layout/topbar.php
 > git show :application/views/pages/index.php
+> git show :application/controllers/Pages.php
+> git check-ignore -v -z --stdin
+> git show :application/models/Pages_model.php
+> git show :application/views/layout/footer.php
+> git show :application/controllers/Pages.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :application/views/pages/index.php
