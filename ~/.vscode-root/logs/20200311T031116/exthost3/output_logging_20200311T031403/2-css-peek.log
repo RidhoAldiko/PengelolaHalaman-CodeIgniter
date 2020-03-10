@@ -1001,3 +1001,7 @@ Invalid Selector...
 [Server(5749) file:///opt/lampp/htdocs/PagesManagement] Document opened: file:///opt/lampp/htdocs/PagesManagement/system/helpers/form_helper.php
 [Server(5749) file:///opt/lampp/htdocs/PagesManagement] Document changed: file:///opt/lampp/htdocs/PagesManagement/system/helpers/form_helper.php
 Invalid Selector...
+[Server(5749) file:///opt/lampp/htdocs/PagesManagement] Document opened: file:///opt/lampp/htdocs/PagesManagement/application/controllers/Pages.php
+[Server(5749) file:///opt/lampp/htdocs/PagesManagement] Document changed: file:///opt/lampp/htdocs/PagesManagement/application/controllers/Pages.php
+[Server(5749) file:///opt/lampp/htdocs/PagesManagement] Document opened: file:///opt/lampp/htdocs/PagesManagement/application/helpers/ridho_helper.php
+[Server(5749) file:///opt/lampp/htdocs/PagesManagement] Document changed: file:///opt/lampp/htdocs/PagesManagement/application/helpers/ridho_helper.php

@@ -26,3 +26,6 @@ Open repository: /opt/lampp/htdocs/PagesManagement
 > git show :application/views/layout/topbar.php
 > git check-ignore -v -z --stdin
 > git show :application/views/pages/index.php
+> git show :application/controllers/Pages.php
+> git check-ignore -v -z --stdin
+> git show :application/helpers/ridho_helper.php
