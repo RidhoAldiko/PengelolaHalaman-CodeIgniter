@@ -6,6 +6,7 @@
     <div class="col">
     <div class="card shadow">
         <div class="card-header border-0">
+        <?= $this->session->flashdata('message'); ?>
         <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#addPage">
             <i class="fas fa-plus"></i> Tambah Halaman
         </button>

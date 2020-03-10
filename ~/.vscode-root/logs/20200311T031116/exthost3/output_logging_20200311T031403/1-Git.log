@@ -49,3 +49,8 @@ Open repository: /opt/lampp/htdocs/PagesManagement
 > git remote --verbose
 > git show :application/views/layout/sidebar.php
 > git config --get commit.template
+> git show :application/controllers/Pages.php
+> git show :application/views/layout/footer.php
+> git show :application/views/layout/sidebar.php
+> git show :application/views/layout/topbar.php
+> git show :application/views/pages/index.php

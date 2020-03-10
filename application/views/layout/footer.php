@@ -33,6 +33,23 @@
 <!--   Argon JS   -->
 <script src="<?= base_url();?>assets/js/argon-dashboard.min.js?v=1.1.0"></script>
 <!-- custom js -->
+<script>
+$('.check-active-publish').on('click', function () {
+    const id = $(this).data('id');
+    const is_publish = $(this).data('is_publish');
+    $.ajax({
+        url: "<?= base_url('halaman/changePublish'); ?>",
+        type: 'post',
+        data: {
+            id: id,
+            is_publish: is_publish,
+        },
+        success: function () {
+            document.location.href = "<?= base_url('halaman'); ?>"
+        }
+    });
+});
+</script>
 
 </body>
 
