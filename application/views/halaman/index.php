@@ -42,6 +42,7 @@
                 <th scope="col">Ikon</th>
                 <th scope="col">Tanggal dibuat</th>
                 <th scope="col">Status terbit</th>
+                <th scope="col">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,6 +59,9 @@
                             <input type="checkbox"  <?= check_is_publish($p['publish'])?> class="form-check-input check-active-publish" id="publish_me"
                             data-is_publish="<?= $p['publish'] ?>" data-id="<?= $p['id'] ?>">
                         </div>
+                    </td>
+                    <td>
+                    <button class="btn btn-danger btn-sm btn-getPage-id" data-toggle="modal" data-target="#deletePage" data-id="<?= $p['id'] ?>" data-url="<?= $p['url'] ?>"><i class="fas fa-trash"></i> Hapus</button>
                     </td>
                 </tr>
                 <?php endforeach ?>
@@ -108,4 +112,33 @@
     </div>
 </div>
 </div>
+<!-- Modal delete page -->
+<div class="modal fade" id="deletePage" tabindex="-1" role="dialog" aria-labelledby="deletePage" aria-hidden="true">
+    <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+        <div class="modal-content bg-gradient-danger">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+            <input type="hidden" name="pageId" id="pageId" value="">
+            <input type="text" name="pageUrl" id="pageUrl" value="">
+                <div class="py-3 text-center">
+                <i class="fas fa-exclamation-triangle fa-5x"></i>
+                    <h4 class="heading mt-4">Peringatan!</h4>
+                    <p>Jika halaman ini dihapus maka Controllers dan View dari halaman ini akan dihapus secara otomatis</p>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white btn-delete-page">Ok, Hapus halaman</button>
+                <button type="button" class="btn btn-link text-white ml-auto" data-dismiss="modal">Batal</button>
+            </div>
+            
+        </div>
+    </div>
+</div>    
+
 

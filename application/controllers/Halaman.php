@@ -96,9 +96,9 @@ public function changePublish(){
 public function addDirFile($title,$url)
 {
                 $structure = './application/views/'.$url.'/';
-                if (!mkdir($structure, 0777, true)) {
-                        die('Gagal membuat folder...');
-                }
+                mkdir($structure, 0777, true);
+                chown($structure, "root");
+                chgrp($structure, "root");
                 $dir_views = "application/views/".$url;
                 $file_views_to_write = "index.php";
                 //isi standar file views 
@@ -125,7 +125,7 @@ public function addDirFile($title,$url)
                 include $dir_views . '/' . $file_views_to_write;
                 $dir = "application/controllers";
                 $file_to_write = ucfirst($url).".php";
-                
+
                 //isi strandar file controllers
                 $content_to_write = 
                 '
@@ -152,5 +152,49 @@ public function addDirFile($title,$url)
                 fwrite($file, $content_to_write);
                 fclose($file);
                 include $dir . '/' . $file_to_write;
-}        
+}
+
+public function deletePage(){
+
+        $id = $this->input->post('pageId');
+        $url = $this->input->post('pageUrl');
+        $this->db->where('id', $id);
+        $this->db->delete('pages');
+        //direktori controllers
+        $controllers = "application/controllers/".ucfirst($url).".php";
+        //hapus file controllers
+        $this->deleteControllers($controllers);
+        // hapus file & folder views
+        $dir = "application/views/".$url;
+        $this->deleteViews($dir);
+        // //hapus file controllers
+        rmdir($dir);
+
+        $this->session->set_flashdata('message','
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Halaman berhasil dihapus </strong> 
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>');
+
+}
+
+function deleteViews($dir)
+{
+    // loop through the files one by one
+        foreach(glob($dir . '/*') as $file){
+        // check if is a file and not sub-directory
+        if(is_file($file)){
+            // delete file
+                unlink($file);
+        }
+        }
+}
+
+public function deleteControllers($controllers){
+        unlink($controllers);
+}
+
+
 }

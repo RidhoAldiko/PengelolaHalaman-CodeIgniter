@@ -49,6 +49,37 @@ $('.check-active-publish').on('click', function () {
         }
     });
 });
+
+//ambil id halaman
+$('.btn-getPage-id').on('click', function () {
+
+const pageId = $(this).data('id');
+const pageUrl = $(this).data('url');
+$('#deletePage').modal('show');
+$('[name="pageId"]').val(pageId);
+$('[name="pageUrl"]').val(pageUrl);
+
+})
+
+//hapus halaman
+$('.btn-delete-page').on('click', function () {
+
+const pageId = $('#pageId').val();
+const pageUrl = $('#pageUrl').val();
+$.ajax({
+    url: "<?= base_url('halaman/deletePage'); ?>",
+    type: 'post',
+    data: {
+        pageId: pageId,
+        pageUrl: pageUrl,
+    },
+
+    success: function () {
+        document.location.href = "<?= base_url('halaman'); ?>";
+    }
+});
+});
+
 </script>
 
 </body>
