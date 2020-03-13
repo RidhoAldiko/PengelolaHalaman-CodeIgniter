@@ -5,6 +5,7 @@ class Halaman extends CI_Controller {
 
 public function index()
 {
+        //aturan form_validation
         $this->form_validation->set_rules('title','Title','required',[
                 'required' =>"Judul Halaman tidak boleh kosong!"
         ]);
@@ -14,45 +15,51 @@ public function index()
         $this->form_validation->set_rules('icon','Icon','required',[
                 'required' =>"Ikon Menu Halaman tidak boleh kosong!"
         ]);
-
+        
+        //jika validasi gagal
         if ($this->form_validation->run() == false) {
 
-        $data['publish_pages'] = $this->db->get_where('pages',['publish' => 1])->result_array();
-        $data['pages'] = $this->db->get('pages')->result_array();
-        $data['title'] = "Pengelola Halaman";
-        $this->load->view('layout/sidebar',$data);
-        $this->load->view('layout/topbar');
-        $this->load->view('halaman/index',$data);
-        $this->load->view('layout/footer');
-        }else {
-        $publish = $this->input->post('publish');
-        if ($publish == null) {
-                $publish = 0; 
-        } else {
-                $publish = 1;
+                $data['publish_pages'] = $this->db->get_where('pages',['publish' => 1])->result_array();
+                $data['pages'] = $this->db->get('pages')->result_array();
+                $data['title'] = "Pengelola Halaman";
+                $this->load->view('layout/sidebar',$data);
+                $this->load->view('layout/topbar');
+                $this->load->view('halaman/index',$data);
+                $this->load->view('layout/footer');
+
         }
-        $data = [
-                'title' => $this->input->post('title'),
-                'url' => str_replace(' ','', $this->input->post('url')),
-                'icon' => $this->input->post('icon'),
-                'date_created' => date("Y-m-d H:i:s"),
-                'publish' => $publish,
-                ];
-        $this->db->insert('pages',$data);
-        $url= str_replace(' ','', $this->input->post('url'));
-        $title= $this->input->post('title');
-        $this->addDirFile($title,$url);
-        $this->session->set_flashdata('message','
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Halaman Berhasil ditambahkan</strong> 
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-        </div>');
-        redirect('halaman');
+        //jika validasi sukses
+        else { 
+
+                $publish = $this->input->post('publish');
+                if ($publish == null) {
+                        $publish = 0; 
+                } else {
+                        $publish = 1;
+                }
+                $data = [
+                        'title' => $this->input->post('title'),
+                        'url' => str_replace(' ','', $this->input->post('url')),
+                        'icon' => $this->input->post('icon'),
+                        'date_created' => date("Y-m-d H:i:s"),
+                        'publish' => $publish,
+                        ];
+                $this->db->insert('pages',$data);
+                $url= str_replace(' ','', $this->input->post('url'));
+                $title= $this->input->post('title');
+                $this->addDirFile($title,$url);
+                $this->session->set_flashdata('message','
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Halaman Berhasil ditambahkan</strong> 
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>');
+                redirect('halaman');
         }
 }
 
+//fungsi merubah status terbitkan
 public function changePublish(){
         $is_publish = $this->input->post('is_publish');
         $id = $this->input->post('id');
@@ -85,6 +92,7 @@ public function changePublish(){
         }
 }
 
+//fungsi untuk membuat file controller & views otomatis
 public function addDirFile($title,$url)
 {
                 $structure = './application/views/'.$url.'/';
@@ -93,6 +101,7 @@ public function addDirFile($title,$url)
                 }
                 $dir_views = "application/views/".$url;
                 $file_views_to_write = "index.php";
+                //isi standar file views 
                 $content_views_to_write = 
                 '
                         <!-- Header -->
@@ -116,6 +125,8 @@ public function addDirFile($title,$url)
                 include $dir_views . '/' . $file_views_to_write;
                 $dir = "application/controllers";
                 $file_to_write = ucfirst($url).".php";
+                
+                //isi strandar file controllers
                 $content_to_write = 
                 '
                         <?php
