@@ -25,8 +25,8 @@ Fitur yang akan datang
 Dibangun dengan
 *******************
 
-- Framework CodeIgniter 3.1.11
-- Web serverApache 2.4.41
+- Framework: CodeIgniter 3.1.11
+- Web server: Apache 2.4.41
 - PHP 7.4.1
-- Database server MariaDB 10.4.11
+- Database server: MariaDB 10.4.11
 - Database client version: libmysql - mysqlnd 7.4.1
