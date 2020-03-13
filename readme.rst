@@ -12,13 +12,13 @@ Fitur Yang telah tersedia
 - Secara otomatis akan membuat controllers dan views menyesuaikan dengan data halaman yang ada di database
 - Merubah status terbitkan halaman dengan jQuery AJAX
 - Menampilkan Menu dari halaman yang telah dibuat.
+- Menghapus data halaman yang ada di database
+- Secara otomatis akan menghapus controllers dan views sesuai dengan data halaman yang dihapus dari database
 
 **************************
 Fitur yang akan datang
 **************************
 
-- Menghapus data halaman yang ada di database
-- Secara otomatis akan menghapus controllers dan views sesuai dengan data halaman yang dihapus dari database
 - Merubah data halaman, coding controllers dan views langsung melalui program 
 
 *******************
