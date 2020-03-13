@@ -2,14 +2,14 @@
 Program Pengelola Halaman
 ###################
 
-Program ini masih dalam tahap pengembangan dan siapa pun dapat berpartisipasi dalam pengembangan program ini.
+Program ini masih dalam tahap pengembangan, siapa pun dapat berpartisipasi dalam pengembangan program ini.
 
 *******************
 Fitur Yang telah tersedia
 *******************
 
 - Menambahkan halaman ke database
-- Secara otomatis akan membuat controller dan views menyesuaikan dengan data halaman yang ada di database
+- Secara otomatis akan membuat controllers dan views menyesuaikan dengan data halaman yang ada di database
 - Merubah status terbitkan halaman dengan jQuery AJAX
 - Menampilkan Menu dari halaman yang telah dibuat.
 
@@ -17,9 +17,9 @@ Fitur Yang telah tersedia
 Fitur yang akan datang
 **************************
 
-- Menghapus data halaman yang ada didatabase
-- Secara otomatis akan menghapus controller dan views sesuai dengan data halaman yang dihapus dari database
-- Merubah data halaman, coding controller dan views langsung melalui program 
+- Menghapus data halaman yang ada di database
+- Secara otomatis akan menghapus controllesr dan views sesuai dengan data halaman yang dihapus dari database
+- Merubah data halaman, coding controllers dan views langsung melalui program 
 
 *******************
 Dibangun dengan
