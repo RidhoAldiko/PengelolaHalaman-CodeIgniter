@@ -18,7 +18,7 @@ Fitur yang akan datang
 **************************
 
 - Menghapus data halaman yang ada di database
-- Secara otomatis akan menghapus controllesr dan views sesuai dengan data halaman yang dihapus dari database
+- Secara otomatis akan menghapus controllers dan views sesuai dengan data halaman yang dihapus dari database
 - Merubah data halaman, coding controllers dan views langsung melalui program 
 
 *******************
