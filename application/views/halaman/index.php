@@ -87,6 +87,8 @@
         <div class="form-group">
             <label for="exampleInputEmail1">Nama Controller</label>
             <input type="text" class="form-control" placeholder="Nama Controller" id="url" name="url" aria-describedby="url">
+            <small id="emailHelp" class="form-text text-muted">Gunakan _ untuk membuat jarak nama controller, 
+            spasi akan otomatis dihapus oleh sistem</small>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Ikon</label>
